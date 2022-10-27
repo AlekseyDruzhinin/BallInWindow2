@@ -41,4 +41,11 @@ public class Ball {
             vy *= -1;
         }
     }
+
+    public boolean cross(Ball ball){
+        if (Math.pow(ball.x-this.x, 2) + Math.pow(ball.y-this.y, 2) < Math.pow(this.r+ball.r, 2)){
+            return true;
+        }
+        return false;
+    }
 }

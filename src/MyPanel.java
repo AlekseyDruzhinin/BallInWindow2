@@ -21,6 +21,18 @@ public class MyPanel extends JPanel {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
+        for (int i = 0; i < balls.size(); ++i){
+            for (int j = 0; j < balls.size(); ++j){
+                if (i == j){
+                    continue;
+                }
+                if (balls.get(i).cross(balls.get(j))){
+                    balls.get(i).c = Color.RED;
+                    balls.get(j).c = Color.RED;
+                }
+            }
+        }
+
         for (Ball ball : balls){
             ball.paint(g);
         }
