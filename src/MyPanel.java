@@ -5,6 +5,9 @@ import java.util.Random;
 
 public class MyPanel extends JPanel {
 
+    int height;
+    int width;
+
     ArrayList<Ball> balls = new ArrayList<>();
     int n = 10;
     Random r = new Random();
